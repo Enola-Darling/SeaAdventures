@@ -1,0 +1,79 @@
+.cardWrap{
+    display: flex;
+    flex-direction: row;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        height: 300px;
+        border: 1px solid $color-primary-contrast;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background-color:$color-primary-contrast;
+
+      }
+      
+      .budget {
+        font-size: $heading5;
+        font-weight: $font-bold;
+        margin-top: 10px;
+      }
+      
+      .title {
+        font-size: $heading3;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      
+      .infoContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+      .key{
+        color: $color-secondary;
+      }
+      .departure {
+        display: flex;
+        flex-direction: column;
+    
+      }
+      
+      .boatType {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .dates {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      .arrowIcon {
+        margin: 10px;
+      }
+      
+      .reservations {
+        margin-top: 10px;
+      }
+      
+      .reservationsAvailable {
+        margin-top: 40px;
+      }
+      
+      .button {
+        margin-top: 10px;
+        background-color: $color-primary;
+        color: $color-primary-contrast;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+}
+
+

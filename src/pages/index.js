@@ -3,10 +3,21 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
+import CardItinerary from "@/components/cardItinerary";
+import {itineraryData} from "@/mock/data"
+import Footer from "@/components/footer.jsx";
+import { useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+
 
 export default function Home() {
+  const [showMore, setShowMore] = useState(false); 
+  const maxVisibleItineraries = 8;
+
+  const handleToggleShowMore = () => {
+    setShowMore((ShowMore) => !ShowMore);
+  };
+ 
   return (
     <>
       <Head>
@@ -20,7 +31,19 @@ export default function Home() {
       <Navbar/>
       {/* ------------ HERO ------------ */}
       <Hero/>
-       
+      <div className={styles.container}>
+      <div className={styles.cardContainer}>
+      {itineraryData.slice(0,  showMore ? itineraryData.length : maxVisibleItineraries).map((itinerary) => (
+        <CardItinerary key={itinerary.id} itinerary={itinerary} />
+      ))}
+      </div>
+      <div className={styles.buttonContainer}>
+      <button className={styles.showMoreButton} onClick={handleToggleShowMore}>
+        {showMore ? 'Show Less' : 'Show More'}
+      </button>
+      </div>
+      </div>
+      <Footer/>
       </main>
     </>
   );

@@ -1,10 +1,90 @@
 .main {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.cardContainer {
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  /* max-height: 98vh; */
+  
+}
+
+.dropdownContainer{
+ margin-top: 40px;
+ margin-left: 105px;
+ display: flex;
+ justify-content: start;
+ appearance: none;
+ background-color: transparent;
+ border: none;
+ width: 100%;
+ font-size: inherit;
+ cursor: inherit;
+ line-height: inherit;
+}
+
+@media screen and (max-width: 640px) {
+  .dropdownContainer{
+    margin-top: 40px;
+    margin-left: 124px;
+    display: flex;
+    justify-content: start;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+   }
+}
+
+.filterLineContanire{
+  width: 100vw;
+}
+
+.filterLine{
+  background-color: #273049 ;
+  margin: 0;
+  padding: 25px;
+  width: 100vw;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showMoreButton {
+  margin-top: 40px;
+  padding: 20px 40px;
+  background-color: #273049;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .description {
@@ -97,7 +177,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);

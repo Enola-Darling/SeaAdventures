@@ -1,0 +1,95 @@
+.cardWrap{
+    display: flex;
+    flex-direction: row;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 230px;
+        height: 230px;
+        border: 1px solid $color-primary-contrast;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        background-color:$color-primary-contrast;
+
+      }
+      
+      .budget {
+        font-size: $heading5;
+        font-weight: $font-bold;
+      }
+      
+      .title {
+        font-size: $heading3;
+        font-weight:$font-bold;
+        margin-bottom: 5px;
+      }
+      
+      .infoContainer {
+        display: flex;
+        justify-content: space-between;
+      }
+      .key{
+        color: $color-secondary;
+      }
+      .departure {
+        display: flex;
+        flex-direction: column;
+      }
+      .port{
+        font-size: $heading5;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        
+      }
+      
+      .boatType {
+        display: flex;
+        flex-direction: column;
+        font-weight: $font-bold;
+      }
+      .departureDate{
+      margin-top: 10px;
+      .arrivalDate{
+        margin-top: 10px;
+      }
+      }
+      .dates {
+        display: flex;
+        align-items: center;
+       gap: 26px;
+      }
+      
+      .arrowIcon {
+        
+      }
+      
+      .reservations {
+        margin-top: 5px;
+      }
+      .reservationsType{
+        margin-left: 5px;
+      }
+      .reservationsAvailable {
+       margin-top: 5px;
+       color:$color-secondary ;
+
+       .reservationsAvailableText{
+        
+       }
+      }
+      
+      .button {
+        margin-top: 10px;
+        background-color: $color-primary;
+        color: $color-primary-contrast;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+}
+
+

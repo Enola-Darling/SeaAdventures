@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background-color:$color-primary-contrast;
+    flex-wrap: wrap;
+  
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }

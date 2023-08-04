@@ -1,0 +1,22 @@
+
+.randomAdventureContainer {
+    margin-top: 20px;
+  }
+
+.randomAdventureList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  
+.randomAdventureTitle {
+    font-size: $heading1;
+    font-weight:$font-bold ;
+    margin-bottom: 20px;
+    text-align:center;
+    background-color:$color-primary;
+    padding: 10px;
+    color: $color-primary-contrast;
+  }

@@ -1,23 +1,37 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import CardItinerary from "@/components/cardItinerary";
 import {itineraryData} from "@/mock/data"
-import Footer from "@/components/footer.jsx";
+import Banner from "@/components/banner/index.jsx";
 import { useState } from "react";
-
+import RandomItineraries from "@/components/randomItineraries";
 
 
 export default function Home() {
   const [showMore, setShowMore] = useState(false); 
   const maxVisibleItineraries = 8;
+  const [selectedPort, setSelectedPort] = useState("Show all");
 
+  const handlePortChange = (e) => {
+    setSelectedPort(e.target.value);
+  };
+
+  const filterItinerariesByPort = (port) => {
+    if (port === "Show all") {
+      return itineraryData;
+    } else {
+      return itineraryData.filter((itinerary) => itinerary.departure.Port === port);
+    }
+  };
+
+  const filteredItineraries = filterItinerariesByPort(selectedPort);
+ 
   const handleToggleShowMore = () => {
     setShowMore((ShowMore) => !ShowMore);
   };
- 
+
   return (
     <>
       <Head>
@@ -32,6 +46,24 @@ export default function Home() {
       {/* ------------ HERO ------------ */}
       <Hero/>
       <div className={styles.container}>
+      <div className={styles.dropdownContainer}>
+          <select value={selectedPort} onChange={handlePortChange}>
+            <option value="Show all">Show all</option>
+            {itineraryData.map((itinerary) => (
+              <option key={itinerary.departure.Port} value={itinerary.departure.Port}>
+                {itinerary.departure.Port}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className={styles.cardContainer}>
+        {filteredItineraries.map((itinerary) => (
+          <CardItinerary key={itinerary.id} itinerary={itinerary} />
+        ))}
+      </div>
+      <div className={styles.filterLineContanire}>
+      <div  className={styles.filterLine}></div>
+      </div>
       <div className={styles.cardContainer}>
       {itineraryData.slice(0,  showMore ? itineraryData.length : maxVisibleItineraries).map((itinerary) => (
         <CardItinerary key={itinerary.id} itinerary={itinerary} />
@@ -43,7 +75,8 @@ export default function Home() {
       </button>
       </div>
       </div>
-      <Footer/>
+      <Banner/>
+      <RandomItineraries data={itineraryData} title="Avventure da scoprire" numToShow={4} />
       </main>
     </>
   );

@@ -6,6 +6,7 @@ const nextConfig = {
     prependData: `
       @import "./src/styles/variables/typography.scss";
       @import "./src/styles/variables/colors.scss";
+      @import "./src/styles/variables/devices.scss";
       `,
   }
 }

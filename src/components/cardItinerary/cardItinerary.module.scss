@@ -5,8 +5,8 @@
     .card {
         display: flex;
         flex-direction: column;
-        width: 200px;
-        height: 300px;
+        width: 230px;
+        height: 230px;
         border: 1px solid $color-primary-contrast;
         padding: 10px;
         margin: 10px;
@@ -18,19 +18,17 @@
       .budget {
         font-size: $heading5;
         font-weight: $font-bold;
-        margin-top: 10px;
       }
       
       .title {
         font-size: $heading3;
-        font-weight: bold;
-        margin-top: 10px;
+        font-weight:$font-bold;
+        margin-bottom: 5px;
       }
       
       .infoContainer {
         display: flex;
         justify-content: space-between;
-        margin-top: 20px;
       }
       .key{
         color: $color-secondary;
@@ -38,30 +36,48 @@
       .departure {
         display: flex;
         flex-direction: column;
-    
+      }
+      .port{
+        font-size: $heading5;
+        font-weight: $font-bold;
+        text-transform: uppercase;
+        
       }
       
       .boatType {
         display: flex;
         flex-direction: column;
+        font-weight: $font-bold;
       }
-      
+      .departureDate{
+      margin-top: 10px;
+      .arrivalDate{
+        margin-top: 10px;
+      }
+      }
       .dates {
         display: flex;
         align-items: center;
-        margin-top: 10px;
+       gap: 26px;
       }
       
       .arrowIcon {
-        margin: 10px;
+        
       }
       
       .reservations {
-        margin-top: 10px;
+        margin-top: 5px;
       }
-      
+      .reservationsType{
+        margin-left: 5px;
+      }
       .reservationsAvailable {
-        margin-top: 40px;
+       margin-top: 5px;
+       color:$color-secondary ;
+
+       .reservationsAvailableText{
+        
+       }
       }
       
       .button {

@@ -29,7 +29,7 @@ const CardItinerary = ({itinerary}) => {
       <div className={styles.infoContainer}>
         <div className={styles.departure}>
           <span className={styles.key}>Departure:</span>
-          <span>{departure.Port}</span>
+          <span className={styles.port}>{departure.Port}</span>
         </div>
         <div className={styles.boatType}>
           <span>{boatType}</span>
@@ -42,11 +42,11 @@ const CardItinerary = ({itinerary}) => {
         <span className={styles.arrivalDate}>{arrivalDate}</span>
       </div>
       <div className={styles.reservations}>
-        <span>Reservations: {reservations}</span>
-        <span>{reservationsType}</span>
+        <span>{reservations}</span>
+        <span className={styles.reservationsType}>{reservationsType}</span>
       </div>
       <div className={styles.reservationsAvailable}>
-        <span>{reservationsAvailable} available</span>
+        <span className={styles.reservationsAvailableText}>available {reservationsAvailable} </span>
       </div>
       <button className={styles.button}>Reservation</button>
     </div>
